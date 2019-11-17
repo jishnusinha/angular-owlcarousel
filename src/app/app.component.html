@@ -1,0 +1,30 @@
+
+<!----------------
+<owl-carousel [options]="mySlideOptions" [items]="images" [carouselClasses]="['owl-theme', 'sliding']" >
+  <div class="item" *ngFor="let image of myCarouselImages;let i = index">
+   <div>
+     <img src={{image}}/>
+   </div>
+  </div>
+ </owl-carousel>
+
+
+ --->
+2
+3
+4
+5
+6
+7
+8
+9
+  <owl-carousel [options]="carouselOptions" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+    <div class="item" *ngFor="let image of images;let i= index">
+      <img class="slide-image" src="{{image.image}}" >
+      <div class="slide-text">
+        <h4>{{image.text}}</h4>
+      </div>
+    </div>
+  </owl-carousel>
+
+<router-outlet></router-outlet>
